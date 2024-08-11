@@ -25,8 +25,10 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/faker": "^5.5.0",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
+    "faker": "^5.5.2",
     "miragejs": "^0.1.41",
     "typescript": "5.5.4"
   }
