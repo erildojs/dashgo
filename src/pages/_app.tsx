@@ -6,6 +6,8 @@ import { theme } from '../styles/theme';
 import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContext';
 import { makeServer } from '../services/mirage';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools'
+
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' })
 
@@ -25,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </main>
         </SidebarDrawerProvider>
       </ChakraProvider>
+      <ReactQueryDevtools />
     </QueryClientProvider>
   )
 }
