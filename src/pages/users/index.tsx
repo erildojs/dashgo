@@ -7,8 +7,8 @@ import Link from "next/link";
 import { useQuery } from "react-query";
 
 export default function UserList() {
-  const { isLoading, error } = useQuery('users', async () => {
-    const response = await fetch('http://localhost:3333/api/users')
+  const { data, isLoading, error } = useQuery('users', async () => {
+    const response = await fetch('http://localhost:3000/api/users')
     const data = await response.json()
     const users = data.users.map(user => {
       return {
@@ -61,21 +61,25 @@ export default function UserList() {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  <Tr px="6">
-                    <Td><Checkbox colorScheme="pink" /></Td>
-                    <Td>
-                      <Box>
-                        <Text fontWeight="bold">ErildoJS</Text>
-                        <Text fontWeight="sm" color="gray.300">erildofranciscojs@gmail.com</Text>
-                      </Box>
-                    </Td>
-                    {isWideVersion && <Td>07 de Agosto, 2024</Td>}
-                    {isWideVersion && (
-                      <Td>
-                        <Button as="a" size="sm" fontSize="sm" colorScheme="purple" leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>Editar</Button>
-                      </Td>
-                    )}
-                  </Tr>
+                  {data.map(user => {
+                    return (
+                      <Tr px="6" key={user.id}>
+                        <Td><Checkbox colorScheme="pink" /></Td>
+                        <Td>
+                          <Box>
+                            <Text fontWeight="bold">{user.name}</Text>
+                            <Text fontWeight="sm" color="gray.300">{user.email}</Text>
+                          </Box>
+                        </Td>
+                        {isWideVersion && <Td>{user.createdAt}</Td>}
+                        {isWideVersion && (
+                          <Td>
+                            <Button as="a" size="sm" fontSize="sm" colorScheme="purple" leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>Editar</Button>
+                          </Td>
+                        )}
+                      </Tr>
+                    )
+                  })}
                 </Tbody>
               </Table>
               <Pagination />
@@ -88,3 +92,4 @@ export default function UserList() {
 }
 
 //o react-query por padrao usa o cache local
+//revalidate on focus - 

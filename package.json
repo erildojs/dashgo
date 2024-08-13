@@ -9,28 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@chakra-ui/react": "^1.8.9",
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@hookform/resolvers": "^3.9.0",
     "apexcharts": "^3.52.0",
-    "framer-motion": "^6.5.1",
+    "framer-motion": "^11.3.24",
     "next": "14.2.5",
-    "react": "^18",
+    "react": "^18.3.1",
     "react-apexcharts": "^1.4.1",
-    "react-dom": "^18",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
-    "react-icons": "^5.2.1",
+    "react-icons": "^5.3.0",
     "react-query": "^3.39.3",
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@types/faker": "^5.5.0",
+    "@types/faker": "^5.5.9",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
-    "faker": "^5.5.2",
-    "miragejs": "^0.1.41",
+    "faker": "^5.5.3",
+    "miragejs": "^0.1.48",
     "typescript": "5.5.4"
   }
 }
