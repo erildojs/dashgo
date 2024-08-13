@@ -1,4 +1,4 @@
-import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpoint, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue } from "@chakra-ui/react";
 import { SidebarNav } from "./SidebarNav";
 import { useSidebarDrawer } from "../../contexts/SidebarDrawerContext";
 
