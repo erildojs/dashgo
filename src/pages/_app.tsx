@@ -18,13 +18,13 @@ const queryClient = new QueryClient()
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider theme={theme}>
-        <SidebarDrawerProvider>
-          <main className={roboto.className}>
+      <main className={roboto.className}>
+        <ChakraProvider theme={theme}>
+          <SidebarDrawerProvider>
             <Component {...pageProps} />
-          </main>
-        </SidebarDrawerProvider>
-      </ChakraProvider>
+          </SidebarDrawerProvider>
+        </ChakraProvider>
+      </main>
       <ReactQueryDevtools />
     </QueryClientProvider>
   )

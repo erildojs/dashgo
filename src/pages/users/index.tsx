@@ -25,7 +25,7 @@ export default function UserList() {
               {!isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4" />}
             </Heading>
             <Link href="/users/create" passHref>
-              <Button as="a" size="sm" fontSize="sm" colorScheme="pink" leftIcon={<Icon as={RiAddLine} fontSize="20" />}>Criar novo</Button>
+              <Button size="sm" fontSize="sm" colorScheme="pink" leftIcon={<Icon as={RiAddLine} fontSize="20" />}>Criar novo</Button>
             </Link>
           </Flex>
           {isLoading ? (
