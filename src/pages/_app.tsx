@@ -6,6 +6,7 @@ import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContext';
 import { makeServer } from '../services/mirage';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { queryClient } from '../services/queryClient';
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' })
 
@@ -13,7 +14,7 @@ if (process.env.NODE_ENV === 'development') {
   makeServer()
 }
 
-const queryClient = new QueryClient()
+
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
